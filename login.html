@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录中心</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				
+			}
+			li{
+				list-style:none;
+			}
+			a{
+				text-decoration: none;
+			}
+			input{
+				color: #999;
+			}
+			.header_lo_wrap{
+				height: 120px;
+				border-bottom: 1px solid #ddd;
+			}
+			.header_lo{
+				width: 1200px;
+				height:120px;
+				margin: 0 auto;
+				
+			}
+			.header_lo h1{
+				margin-top: 30px;
+				float: left;
+			}	
+			.header_lo .lo{
+				float: right;
+				padding-top: 48px;
+			}	
+			.header_lo .lo a{
+				font-size: 12px;
+				color: #000;
+				padding: 0px 14px;
+				
+			}
+			.header_lo .lo a:nth-child(1){
+				border-right: 1px solid #000;
+				
+			}
+			.bottom{
+				height: 179px;
+				border-top: 1px solid #ddd;
+				text-align: center;
+				color: #999;
+				font-size: 12px;
+				font-weight: 100;
+				padding-top: 73px;
+				box-sizing: border-box;
+			}
+			.bottom>p a{
+				color: #999;
+				border-right: 1px solid #999;
+				padding-right: 5px;
+			}
+			.bottom p{
+				font-weight: 100;
+				padding-top: 9px;
+				box-sizing: border-box;
+			}
+			.cen{
+				height: 628px;
+				background:url(img/bg.jpg) no-repeat center ;
+			}
+			.content{
+				width: 1200px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			.c_login{
+				margin-top: 112px;
+				width: 368px;
+				padding-bottom: 32px;
+				background: #fff;
+				float: right;
+				padding-left:36px;
+				padding-right: 36px;
+				padding-top: 15px;
+				box-sizing: border-box;
+			}
+			.lo_style a{
+				font-size: 12px;
+				color: #000;
+				text-align: center;
+				box-sizing: border-box;
+				float: left;
+				line-height: 52px;
+				width: 148px;
+				color: #999;
+				
+				}
+			
+			.lo_hid2{
+				display: none;
+			}
+			.lo_hid1{
+				
+			}
+			.lo_name #lo_txt_name
+			{
+				height: 45px;
+				width: 100%;
+				border: 1px solid #ddd;
+				margin-top: 20px;
+				text-indent: 15px;
+			}	
+			.lo_pwd #lo_txt_pwd
+			{
+				height: 45px;
+				width: 100%;
+				border: 1px solid #ddd;
+				margin-top: 20px;
+				text-indent: 15px;
+			}
+			.lo_ch{
+				font-size: 12px;
+				margin-top: 24px;
+				color:#666;
+			}
+			.lo_ch input{
+				margin-right: 7px;
+				margin-top: 2px;
+				float: left;
+  			}
+			.lo_ch a{
+				float: right;
+				color:#666;
+			}
+			.lo_login{
+				margin-top: 23px;
+			}
+			.lo_login #lo_btn{
+				width: 100%;
+				height: 50px;
+				border: 0;
+				background: #33cb98;
+				border-radius: 5px;
+				font-size: 18px;
+				color: #fff;
+			}
+			.lo_phone #lo_txt_phone{
+				height: 45px;
+				width: 100%;
+				border: 1px solid #ddd;
+				margin-top: 20px;
+				text-indent: 15px;
+			}
+			.lo_vali{
+				display: flex;
+			}
+			.lo_vali a{
+				width: 98px;
+				margin-top: 20px;
+				border: 1px solid #000;
+				margin-left: 1px;
+			}
+			.lo_vali a img{
+				display: block;
+			}
+			.lo_vali #lo_txt_vali{
+				height: 45px;
+				width: 193px;
+				border: 1px solid #ddd;
+				margin-top: 20px;
+				text-indent: 15px;
+			}
+			.lo_code #lo_txt_code{
+				height: 45px;
+				width: 193px;
+				border: 1px solid #ddd;
+				margin-top: 20px;
+				text-indent: 15px;
+			}
+			.lo_code{
+				display: flex;
+				
+			}
+			.lo_code a{
+				color: #666;
+				text-align: center;
+				width: 98px;
+				line-height: 45px;
+				border-radius: 5px;
+				margin-top: 20px;
+				margin-left: 1px;
+				border: 1px solid #33cb98;
+				font-size: 12px;
+			}
+			.co{
+				font-size: 12px;
+				margin-top: 20px;
+				height: 26px;
+			}
+			.co span{
+				float: left;
+				color: #666;
+			}
+			.co a{
+				float: right;
+				color: #666;
+			}
+			.lo_style a:hover{
+				color: #000;
+				border-bottom: 1px solid #33cb98;
+			}
+			.lo_hid1 span{
+				color: #ff6f4a;
+				font-size: 12px;
+				margin-left: 3px;
+				display: none;
+			}
+			.lo_hid2 span{
+				color: #f00;
+				font-size: 12px;
+				margin-left: 3px;
+				display: none;
+			}
+			#co_img{
+				background: palevioletred;
+			}
+			#co_img span{
+				float: left;
+				margin-right: 20px;
+			}
+			#co_img span:nth-child(1){
+				width: 18px;
+				height: 14px;
+				
+				background: url(img/ico.png) no-repeat 0px -144px;
+			}
+			#co_img span:nth-child(2){
+				width: 15px;
+				height: 16px;
+				
+				background: url(img/ico.png) no-repeat 0px -86px;
+			}
+			#co_img span:nth-child(3){
+				width: 17px;
+				height: 17px;
+				
+				background: url(img/ico.png) no-repeat 0px -171px;
+			}
+		</style>
+		
+	</head>
+	<script src="js/login.js"></script>
+	<body>
+		<div class="header_lo_wrap">
+			<div class="header_lo">
+				<h1><img src="img/cart-logo.png"/></h1>
+				<div class="lo">
+					<a href="javascript:;">品牌特卖</a>
+					<a href="javascript:;">试用中心</a>
+				</div>
+			</div>
+		</div>
+		<div class="cen">
+			<div class="content">
+				<div class="c_login">
+					<div class="lo_style">
+						<a id="lo_p" href="javascript:;">普通登录</a>
+						<a id="lo_shou" href="javascript:;">手机动态密码登录</a>
+					</div>
+					<div class="lo_hid1">
+						<div class="lo_name">
+							<input type="text" id="lo_txt_name"  value="手机号/邮箱/用户名" /><span id="val1">格式不正确</span>
+						</div>
+						<div class="lo_pwd">
+							<input type="text" id="lo_txt_pwd"  value="密码" /><span id="val2">由六位数字组成</span>
+						</div>
+					</div>
+					<div class="lo_hid2">
+						<div class="lo_phone">
+							<input type="tetx" id="lo_txt_phone" value="已注册的手机号" />
+						</div>
+						<div class="lo_vali">
+							<input type="tetx" id="lo_txt_vali" value="验证码" />
+							<a href="javascript:;"><img src="img/vali2.jpg"/></a>
+						</div>
+						<span id="corr1">验证码不正确</span>
+						<div class="lo_code">
+							<input type="text" id="lo_txt_code" value="动态码" />
+							<a id="get_vali" href="javascript:;">获取动态密码</a>
+						</div>
+						<span id="corr2">动态密码错误</span>
+					</div>
+					
+					
+					
+					<div class="lo_ch">
+						<input type="checkbox" />自动登录
+						<a href="javascript:;">忘记密码？</a>
+					</div>
+					<div class="lo_login">
+						<input type="button" id="lo_btn" value="登       录"/>
+					</div>
+					<div class="co">
+						<span>合作网站登录：</span><a href="register.html">注册账号</a>
+						
+					</div>
+					<div id="co_img">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="bottom">
+			<p> 
+				<a href="javascript:;">E宠商城</a>
+				<a href="javascript:;">知识</a>
+				<a href="javascript:;">关于我们</a>
+				<a href="javascript:;">联系我们</a>
+			</p>
+			<p>渝ICP备13005505号 渝ICP备 10002905 增值电信业务经营许可证：渝B2-20140042  Copyright&copy; 2007-2016 epet.com 重庆易宠科技有限公司</p>
+		</div>
+	</body>
+	
+</html>

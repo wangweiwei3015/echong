@@ -117,13 +117,16 @@
 	position: relative;
 }
 .hide .h_dog dl dt img{
+	transition: all .5s;
 	position: absolute;
 	top:-20px;
 	left: -108px;
-	z-index: -100;
+	opacity: 0;
 }
-.hide .h_dog dl:hover{
-	
+.hide .h_dog dl:hover dt img{
+	transition: all .5s;
+	opacity: 1;
+	transform: translateX(-25px);
 }
 .hide .h_dog dl dt h5 {
 	line-height: 34px;
@@ -176,10 +179,6 @@
 	color: #999;
 	padding-left: 1px;
 }
-.hide .h_classify .nav1>li:hover{
-	
-	
-}
 .hide .h_classify .nav1>li>span {
 	float: right;
 	height: 5px;
@@ -208,9 +207,6 @@
 	background: #fb6003;
 	border-radius: 8px;
 	color: #fff;
-}
-.hide .h_classify .nav2{
-	
 }
 
  .hide .h_classify .zhul  {
@@ -270,7 +266,6 @@
 .hide .hide_menu {
 	padding-left: 10px;
 	padding-right: 10px;
-	/*display: none;*/
 }
 
 .hide .hide_menu li {

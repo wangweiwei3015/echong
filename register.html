@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>注册中心</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				
+			}
+			li{
+				list-style:none;
+			}
+			a{
+				text-decoration: none;
+			}
+			input{
+				color: #999;
+			}
+			.header_re_wrap{
+				height: 120px;
+				border-bottom: 1px solid #ddd;
+			}
+			.header_re{
+				width: 1200px;
+				height:120px;
+				margin: 0 auto;
+				
+			}
+			.header_re h1{
+				float: left;
+				margin-top: 30px;
+			}	
+			.header_re .lo{
+				float: right;
+				font-size: 12px;
+				line-height: 108px;
+			}	
+			.re{
+				width:700px;
+				padding-left: 12px;
+				margin: 45px auto;
+			}
+			.phone,.vali,.msg_vali,.re_name,.re_pwd,.re_rpwd{
+				height: 54px;
+				margin-top:10px ;
+			}
+			.phone b{
+				font-style: normal;
+				font-size: 15px;
+				font-weight: 300;
+				margin-left: 31px;
+			}
+			.vali{
+				display: flex;
+			}
+			.vali b{
+				font-style: normal;
+				font-size: 15px;
+				font-weight: 300;
+				margin-top: 18px;
+				text-indent: 31px;
+			}
+			.vali #txt_vali{
+				width: 203px;
+				height: 52px;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				text-indent: 16px;
+				color: #a9a9a9;
+				
+			}
+			.vali_b{
+				width: 200px;
+				border: 1px solid #ddd;
+				background: #fff;
+				border-radius: 4px;
+				height: 52px;
+				display: flex;
+				margin-left: 10px;
+			}
+			.vali_b a{
+				color: #999;
+				margin-top: 20px;
+				font-size: 12px;
+				margin-left: 12px;
+			}
+			.phone #txt_phone{
+				width: 413px;
+				height: 52px;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				text-indent: 16px;
+				color: #a9a9a9;
+			}
+			.msg_vali b{
+				font-style: normal;
+				font-size: 15px;
+				font-weight: 300;
+				margin-top: 18px;
+			}
+			.msg_vali #txt_msg{
+				width: 253px;
+				height: 52px;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				text-indent: 16px;
+				color: #a9a9a9;
+			}
+			.msg_vali{
+				display: flex;
+			}
+			.msg_vali_c{
+				display: flex;
+			}
+			.msg_vali_c .vali_get{
+				width: 149px;
+				border: 1px solid #33cb98;
+				border-radius: 5px;
+				margin-left: 10px;
+				text-align: center;
+				font-size: 12px;
+				padding-top: 19px;
+			}
+			.msg_vali_c .vali_get a{
+				color: #999;
+			}
+			.re_name b{
+				font-style: normal;
+				font-size: 15px;
+				font-weight: 300;
+				margin-top: 18px;
+				margin-left: 31px;
+			}
+			.re_name #txt_name{
+				width: 413px;
+				height: 52px;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				text-indent: 16px;
+				color: #a9a9a9;
+			}
+			.re_rpwd b{
+				font-style: normal;
+				font-size: 15px;
+				font-weight: 300;
+				margin-top: 18px;
+				margin-left: 16px;
+			}
+			.re_rpwd #txt_rpwd{
+				width: 413px;
+				height: 52px;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				text-indent: 16px;
+				color: #a9a9a9;
+			}
+			.re_pwd b{
+				font-style: normal;
+				font-size: 15px;
+				font-weight: 300;
+				margin-top: 18px;
+				margin-left: 46px;
+			}
+			.re_pwd #txt_pwd{
+				width: 413px;
+				height: 52px;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				text-indent: 16px;
+				color: #a9a9a9;
+			}
+			.xieyi{
+				font-size: 12px;
+				margin-top: 12px;
+				margin-left: 93px;
+			}
+			.xieyi b{
+				font-weight: 100;
+			}
+			.re_register{
+				width: 413px;
+				margin-left: 93px;
+				margin-top: 26px;
+			}
+			.re_register #re_btn{
+				width: 413px;
+				background: #ededed;
+				border-radius: 5px;
+				border: none;
+				height: 52px;
+			}
+			.bottom{
+				height: 179px;
+				border-top: 1px solid #ddd;
+				text-align: center;
+				color: #999;
+				font-size: 12px;
+				font-weight: 100;
+				padding-top: 73px;
+				box-sizing: border-box;
+			}
+			.bottom>p a{
+				color: #999;
+				border-right: 1px solid #999;
+				padding-right: 5px;
+			}
+			.bottom p{
+				font-weight: 100;
+				padding-top: 9px;
+				box-sizing: border-box;
+			}
+			span{
+				color: #ff6f4a;
+				display: none;
+				background: #fff3d9;
+				line-height: 55px;
+				width: 170px;
+				margin-left: 5px;
+				text-indent: 10px;
+			}
+			i{
+				color: #ff6f4a;
+				display: none;
+				background: #fff3d9;
+				line-height: 55px;
+				width: 170px;
+				height: 55px;
+				margin-left: 5px;
+				text-indent: 10px;
+				font-style: normal;
+			}
+
+		</style>
+		<script src="js/register.js"></script>
+	</head>
+	<body>
+		<div class="header_re_wrap">
+			<div class="header_re">
+				<h1><img src="img/cart-logo.png"/></h1>
+				<div class="lo">
+					<b>已有账号？</b><a id="re_lo" href="javascript:;">登录</a>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="re">
+			<div class="phone">
+				<b>手机号：</b><input type="text" id="txt_phone" value="请输入手机号"/><span>请输入11位手机号码</span>
+			</div>
+			<div class="vali">
+				<b>验证码：</b>
+				<input type="text" id="txt_vali" value="请输入图片内容"/>
+				<div class="vali_b">
+					<h5><img src="img/vali.jpg"/></h5>
+					<a href="javascript:;">换一换</a>
+				</div>
+				<i id="va2">请输入四位验证码</i>
+			</div>
+			<div class="msg_vali">
+				<b>短信验证码：</b>
+				<div class="msg_vali_c">
+					<input type="txt" id="txt_msg" value="验证码（在控制台）" />
+					<div class="vali_get">
+						<a id="get_code" href="javascript:;">获取验证码</a>
+					</div>
+					<i id="va">验证码不正确</i>
+				</div>
+			</div>
+			<div class="re_name">
+				<b>用户名：</b><input type="text" id="txt_name" value="用户名"/><span>请输入4-20位中文名</span>
+			</div>
+			<div class="re_pwd">
+				<b>密码：</b><input type="text" id="txt_pwd" value="密码(8-20位，区分大小写)"/><span>请输入6-20位密码</span>
+			</div>
+			<div class="re_rpwd">
+				<b>确认密码：</b><input type="text" id="txt_rpwd" value="确认密码"/><span>密码不一致</span>
+			</div>
+			<div class="xieyi">
+				<input type="checkbox" id="xie_check"  /><b>我已阅读并接受E宠</b><a href="javascript:;">《用户使用协议》</a>
+			</div>
+			<div class="re_register">
+				<input type="button" id="re_btn" value="立即注册" />
+			</div>
+			
+		</div>
+		<div class="bottom">
+			<p> 
+				<a href="javascript:;">E宠商城</a>
+				<a href="javascript:;">知识</a>
+				<a href="javascript:;">关于我们</a>
+				<a href="javascript:;">联系我们</a>
+			</p>
+			<p>渝ICP备13005505号 渝ICP备 10002905 增值电信业务经营许可证：渝B2-20140042  Copyright&copy; 2007-2016 epet.com 重庆易宠科技有限公司</p>
+		</div>
+	</body>
+	<script>
+	</script>
+</html>
