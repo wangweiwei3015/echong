@@ -514,3 +514,15 @@ height: 20px;
 .bottom_1_wrap{
 	margin-top: 0;
 }
+.flow{
+	width: 978px;
+	height: 5835px;
+	position: absolute;
+}
+.flow-box{
+	width: 25%;
+	height: 362px;
+	float: left;
+	box-sizing: border-box;
+	padding: 14px 10px 0;
+}
